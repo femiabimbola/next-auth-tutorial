@@ -7,3 +7,20 @@
 
   Install prisma by `npm install -D prisma`
   Initialize by `npx prisma init`
+  Then you create a relation in the prisma folder
+
+  Also you want to make prisma available for the client side
+  </br> It gives different method that allows useful transaction
+  `npm i @prisma/client`
+
+### The way you create authentication is by
+
+api\auth\[...nextauth]\route.jsx or tsx
+
+## Session Toke
+
+You can get session token from the client side or server side
+
+The application tab contains the session tab
+
+27;10
