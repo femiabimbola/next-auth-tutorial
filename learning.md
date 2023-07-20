@@ -23,8 +23,14 @@ You can get session token from the client side or server side
 
 The application tab contains the session tab
 
+### The function of csrf token
+
+What is the function of crsf token
+
 27;10
 
 ### The Repo
 
 https://github.com/bwestwood11/next-auth-tutorial
+
+1.08.00

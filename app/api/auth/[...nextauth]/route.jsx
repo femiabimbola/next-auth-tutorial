@@ -27,7 +27,7 @@ export const authOptions = {
           credentials : {
             email: { label: 'Email', type: 'text', placeholder: 'jsmith'},
             password: { label: 'Password', type: "password"},
-            username: { label:"Username", type: 'text', placeholder:'Enter a useename'},
+            username: { label:"Username", type: 'text', placeholder:'Enter a username'},
           },
           //  The login logic
           async authorize(credentials) {
@@ -39,7 +39,7 @@ export const authOptions = {
             // Check to see if user exists
             const user = await prisma.user.findUnique({
               where: { email: credentials.email}
-            })
+            });
           
             // if no user was found or user without hashed password
             // Email maybe found but should be encrypted

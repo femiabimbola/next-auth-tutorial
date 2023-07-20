@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import axios from "axios"
+import { toast } from 'react-hot-toast';
 // Axios is used when call data from backend to the frontend
 // bcrypt is use to hash password before sending them to database
 
@@ -12,8 +13,10 @@ export default function Register() {
     const registerUser = async (e) => {
       e.preventDefault()
       axios.post('/api/register', data)
-            .then((res) => alert('Your account has been created'))
-            .catch(res => alert(' An error occured') )
+            // .then((res) => alert('Your account has been created'))
+            .then((res) => toast.success('User has been registered'))
+            // .catch(res => alert(' An error occured') )
+            .catch(res => toast.error('An error occured'))
     }
 
     return (

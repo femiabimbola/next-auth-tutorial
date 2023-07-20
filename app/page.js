@@ -13,6 +13,7 @@ export default async function Home() {
       <h1> Home </h1>
       <h1> Server side rendering </h1>
       <pre> {JSON.stringify(session)} </pre>
+      <h1> The client side</h1>
       <User />
     </section>
   )

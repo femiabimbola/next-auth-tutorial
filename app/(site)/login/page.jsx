@@ -1,19 +1,24 @@
 //  The state on a page is blank, then user can be filling it individually
 // The axios is not used because nextauth provides a signin method
 // Signin method does the work of axios in the login process
+//  Read about the ? 
 
 "use client"
 import { useState } from "react"
 import {signIn } from "next-auth/react"
+import { toast } from "react-hot-toast"
 
 export default function login() {
   const [data, setData] = useState({email:'', password:''})
 
   const loginUser = (e) => {
-    e.preventDefault();
-    signIn('credientials', {...data, redirect:false})
-          .then(() => alert('You have been logged in'))
-          .catch(() => alert('Error occured'))
+    e.preventDefault()
+    signIn('credentials', {...data, redirect: false})
+    //  Nextauth signIn give callback function
+          .then(( callback ) => {
+            if(callback?.error) {toast.error(callback.error)}
+            if(callback?.ok && callback?.error === null ){toast.success('Logged in successfully')}
+          })
   }
 
     return (
