@@ -58,6 +58,7 @@ export const authOptions = {
           }
         }),
     ], 
+    // The reason for the secret is because of hashing the password
     secret: process.env.SECRET,
     session: {
       strategy:'jwt',

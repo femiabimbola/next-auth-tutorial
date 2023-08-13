@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import axios from "axios"
-import { toast } from 'react-hot-toast';
+import { toast } from 'react-hot-toast'; 
 // Axios is used when call data from backend to the frontend
 // bcrypt is use to hash password before sending them to database
 
