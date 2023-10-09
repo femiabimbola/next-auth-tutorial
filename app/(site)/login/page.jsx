@@ -15,8 +15,8 @@ export default function login() {
   const [data, setData] = useState({email:'', password:''})
 
   useEffect(() => {
-    if(session?.status === 'authenticated') { router.push('/dashboard')}
-  })
+    if(session?.status === 'authenticated') router.push('/dashboard')
+  },[] )
 
   const loginUser = (e) => {
     e.preventDefault()

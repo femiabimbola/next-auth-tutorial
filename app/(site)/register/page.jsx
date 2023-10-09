@@ -42,8 +42,8 @@ export default function Register() {
                 </label>
                 <div className="mt-2">
                   <input
-                    id="name" value={data.name} name="name" type="text"
-                    required onChange={e => setData({...data, name:e.target.value})}
+                    id="name" value={data.name} name="name" type="text" required 
+                    onChange={e => setData({...data, name:e.target.value})}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -55,7 +55,8 @@ export default function Register() {
                 <div className="mt-2">
                   <input
                     id="email" value={data.email} 
-                    name="email" onChange={e => setData({...data, email:e.target.value})}
+                    name="email" 
+                    onChange={e => setData({...data, email:e.target.value})}
                     type="email"
                     autoComplete="email"
                     required
